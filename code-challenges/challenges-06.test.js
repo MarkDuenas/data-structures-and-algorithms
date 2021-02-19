@@ -70,21 +70,14 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const templatingWithMustache = () => {
-  // let template = $('#template').html();
-  // for( let character in characters) {
-  //   let page = Mustache.render(template, {
-  //     name: character.name,
-  //     spouse: character.spouse,
-  //     children: character.children,
-  //     house: character.house,
-  //   });
-  // }
+  let array = [];
+  const template = $('#template').html();
+  characters.forEach(person => {
+    let html = Mustache.render(template, person);
+    array.push(html);
 
-  let arr = [];
-  Object.values(characters).forEach(value => {
-    arr.push(value);
   });
-  return arr;
+  return array;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,17 +127,20 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Object.values(arr).forEach( value => {
-  //   if(value.name === character && value.children.length !== 0) {
-  //     return true;
-  //   }
-  //   else if (value.name === character && value.children.length === 0) {
-  //     return false;
-  //   }
-  //   else{
-  //     return false;
-  //   }
-  // });
+  let charNumber;
+  arr.forEach((char, index) => {
+    if (char.name === character) {
+      charNumber = index;
+    }
+  });
+  if (charNumber === undefined) {
+    return false;
+  }
+  if (arr[charNumber].children.length > 1) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
