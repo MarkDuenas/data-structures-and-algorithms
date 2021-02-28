@@ -58,3 +58,5 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 [Code Challenge 01](./javascript/arrayReverse)
 
 [Code Challenge 02](./javascript/arrayShift)
+
+[Code Challenge 03](./javascript/binarySearch)
