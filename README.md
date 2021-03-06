@@ -55,8 +55,10 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 ### Table of Contents
 
-[Code Challenge 01](./javascript/arrayReverse)
+[Code Challenge 01 Array Reverse](./javascript/arrayReverse)
 
-[Code Challenge 02](./javascript/arrayShift)
+[Code Challenge 02 Array Shift](./javascript/arrayShift)
 
-[Code Challenge 03](./javascript/arrayBinarySearch)
+[Code Challenge 03 Binary Search](./javascript/arrayBinarySearch)
+
+[Code Challenge 05 Linked List](./javascript/linkedList)
