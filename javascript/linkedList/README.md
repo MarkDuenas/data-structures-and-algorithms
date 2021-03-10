@@ -20,3 +20,9 @@ Create a Node class and a LinkedList class that will work together to create a L
 - `insert()` - insert a new Node in front of the list, reassigns new head to the new Node and assigns the old head to the next value of the new Node.
 - `includes()` - checks the Linked List if the value passed in as an argument exists inside the list.
 - `toString()` - prints out the whole Linked List in the console and returns a string with each node and its value.
+- `append()` - insert a new Node with a value in the tail of the LinkedList.
+- `insertBefore` - takes in a value and newValue arguments, creates new node with newValue and inserts new node before the value.
+- `insertAfter` - takes in a value and newValue arguments, creates new node with newValue and inserts new node after the value.
+- `delete` - deletes the node with the value that is passed in as an argument.
+
+## Solution

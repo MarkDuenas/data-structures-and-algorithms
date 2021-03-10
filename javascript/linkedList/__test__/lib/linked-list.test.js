@@ -56,4 +56,57 @@ describe('Singly Linked List', () => {
     expect(printedList).toEqual('{35}->{15}->{8}->{5}->');
   });
 
+  it('should add a node at the end of the list', () => {
+    let newList = new SLList();
+    newList.append(12).append(35);
+    expect(newList.head.next.value).toEqual(35);
+  });
+
+  it('should add multiple nodes at the end of list', () => {
+    let newList = new SLList();
+    newList.append(12).append(35).append(88).append(99);
+    expect(newList.head.next.next.value).toEqual(88);
+    expect(newList.head.next.next.next.value).toEqual(99);
+  });
+
+  it('should add multiple nodes at the end of list', () => {
+    let newList = new SLList();
+    newList.append(12).append(35).append(88).append(99);
+    expect(newList.head.next.next.value).toEqual(88);
+    expect(newList.head.next.next.next.value).toEqual(99);
+  });
+
+  it('should insert a node before a node located in the middle of a linked list', () => {
+    let newList = new SLList();
+    newList.append(12).append(35).append(88).append(99);
+    newList.insertBefore(88, 77);
+    let printedList = newList.toString();
+    expect(printedList).toEqual('{12}->{35}->{77}->{88}->{99}->');
+  });
+
+  it('should insert a node before the first node of a linked list', () => {
+    let newList = new SLList();
+    newList.append(12).append(35).append(88).append(99);
+    newList.insertBefore(12, 123);
+    expect(newList.head.value).toEqual(123);
+  });
+
+  it('should insert after a node in the middle of the linked list', () => {
+    let newList = new SLList();
+    newList.append(12).append(35).append(88).append(99);
+    newList.insertAfter(35, 765);
+    let printedList = newList.toString();
+    expect(printedList).toEqual('{12}->{35}->{765}->{88}->{99}->');
+  });
+
+  it('should insert a node after the last node of the linked list', () => {
+    let newList = new SLList();
+    newList.append(12).append(35).append(88).append(99);
+    newList.insertAfter(99, 1000);
+    let printedList = newList.toString();
+    expect(printedList).toEqual('{12}->{35}->{88}->{99}->{1000}->');
+  });
+
+
+
 });
