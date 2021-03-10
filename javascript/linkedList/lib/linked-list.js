@@ -51,6 +51,92 @@ class SLList {
     return string;
   }
 
+  append(value) {
+    let node = new SLNode(value);
+    if(this.head === null) {
+      this.head = node;
+      return this;
+    }
+
+    let current = this.head;
+
+    while(current.next !== null) {
+      current = current.next;
+    }
+
+    current.next = node;
+    return this;
+  }
+
+  insertBefore(value, newValue) {
+    let node = new SLNode(newValue);
+
+    if(this.head === null) {
+      this.head = node;
+      return this;
+    }
+
+    if(this.head.value === value) {
+      let temp = this.head;
+      this.head = node;
+      node.next = temp;
+      return this;
+    }
+
+    let current = this.head;
+
+    while(current.next !== null) {
+      if(current.next.value === value) {
+        let temp = current.next;
+        node.next = temp;
+        current.next = node;
+        return this;
+      }
+      current = current.next;
+    }
+    return this;
+  }
+
+  insertAfter(value, newValue) {
+    let node = new SLNode(newValue);
+
+    if(this.head === null) {
+      this.head = node;
+      return this;
+    }
+    let current = this.head;
+
+    while(current !== null) {
+      if(current.value === value) {
+        let temp = current.next;
+        node.next = temp;
+        current.next = node;
+        return this;
+      }
+      current = current.next;
+    }
+    return this;
+  }
+
+  delete(value){
+    let current = this.head;
+
+    if (this.head.value === value){
+      let newHead = this.head.next;
+      this.head = newHead;
+      return this;
+    }
+    
+    while (current.next){
+      if (current.next.value === value){
+        let updateNode = current.next.next;
+        current.next = updateNode;
+        return this;
+      }
+      current = current.next;
+    }
+    return this;
+  }
 }
 
 module.exports = SLList;
