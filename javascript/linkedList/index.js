@@ -15,6 +15,7 @@ list.insertBefore(5, 8008);
 list.insertBefore(8, 789);
 
 list.delete(8008);
+list.append(8734);
 console.log(list.length());
 list.toString();
 console.log(list.kthFromEnd(4));
