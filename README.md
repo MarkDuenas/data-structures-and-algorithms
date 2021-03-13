@@ -61,4 +61,5 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 [Code Challenge 03 Binary Search](./javascript/arrayBinarySearch)
 
-[Code Challenge 05 Linked List](./javascript/linkedList)
+[Code Challenge 05, 06, 07 Linked List](./javascript/linkedList)
+
