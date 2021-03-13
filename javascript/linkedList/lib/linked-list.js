@@ -137,6 +137,44 @@ class SLList {
     }
     return this;
   }
+
+  length(){
+    let current = this.head;
+    let count = 0;
+
+    while(current){
+      current = current.next;
+      count += 1;
+    }
+    return count;
+  }
+
+  kthFromEnd(k){
+    let current = this.head;
+    let index = 0;
+
+    if(!this.head){
+      return false;
+    }
+
+    if(this.length() <= k || k < 0) {
+      return 'Linked List does not have that many nodes';
+    }
+
+    let count = (this.length()) - k;
+
+    while(current) {
+      index += 1;
+
+      if(count === index){
+        return current.value;
+      }
+
+      current = current.next;
+    }
+
+    return 'Cleared While Loop for some reason';
+  }
 }
 
 module.exports = SLList;

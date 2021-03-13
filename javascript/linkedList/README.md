@@ -21,8 +21,17 @@ Create a Node class and a LinkedList class that will work together to create a L
 - `includes()` - checks the Linked List if the value passed in as an argument exists inside the list.
 - `toString()` - prints out the whole Linked List in the console and returns a string with each node and its value.
 - `append()` - insert a new Node with a value in the tail of the LinkedList.
-- `insertBefore` - takes in a value and newValue arguments, creates new node with newValue and inserts new node before the value.
-- `insertAfter` - takes in a value and newValue arguments, creates new node with newValue and inserts new node after the value.
-- `delete` - deletes the node with the value that is passed in as an argument.
+- `insertBefore()` - takes in a value and newValue arguments, creates new node with newValue and inserts new node before the value.
+- `insertAfter()` - takes in a value and newValue arguments, creates new node with newValue and inserts new node after the value.
+- `delete()` - deletes the node with the value that is passed in as an argument.
+- `length()` - returns the length of the Linked List;
+- `kthFromEnd(k)` returns the value of the node from kth postion from the end.
 
 ## Solution
+
+**Linked Insertions**
+![Insertions](./assets/LinkedList.jpg)
+
+**kthFromEnd**
+
+![kthFromEnd](./assets/LLkthFromEnd.jpg)

@@ -107,6 +107,41 @@ describe('Singly Linked List', () => {
     expect(printedList).toEqual('{12}->{35}->{88}->{99}->{1000}->');
   });
 
+  it('should return a error string if k is greater than the length of linked list', () => {
+    let newList = new SLList();
+    newList.insert(5).insert(8).insert(15).insert(35);
+
+    expect(newList.kthFromEnd(6)).toEqual('Linked List does not have that many nodes');
+  });
+
+  it('should return a error string if k is equal to the length of linked list', () => {
+    let newList = new SLList();
+    newList.insert(5).insert(8).insert(15).insert(35);
+
+    expect(newList.kthFromEnd(4)).toEqual('Linked List does not have that many nodes');
+  });
+
+  it('should return a error string if k is a negative number', () => {
+    let newList = new SLList();
+    newList.insert(5).insert(8).insert(15).insert(35);
+
+    expect(newList.kthFromEnd(-4)).toEqual('Linked List does not have that many nodes');
+  });
+
+  it('should return the value of the node on a single node list', () => {
+    let newList = new SLList();
+    newList.insert(5);
+
+    expect(newList.kthFromEnd(0)).toEqual(5);
+  });
+
+  it('should return the value of the node given a valid k value', () => {
+    let newList = new SLList();
+    newList.insert(5).insert(8).insert(15).insert(35);
+
+    expect(newList.kthFromEnd(2)).toEqual(15);
+  });
+
 
 
 });
