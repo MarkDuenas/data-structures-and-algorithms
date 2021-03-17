@@ -27,6 +27,8 @@ Create a Node class and a LinkedList class that will work together to create a L
 - `length()` - returns the length of the Linked List;
 - `kthFromEnd(k)` returns the value of the node from kth postion from the end.
 
+- `zipLists(list1, list2)` - takes in two linked list and zips them together in a zipper like patter.
+
 ## Solution
 
 **Linked Insertions**
@@ -35,3 +37,7 @@ Create a Node class and a LinkedList class that will work together to create a L
 **kthFromEnd**
 
 ![kthFromEnd](./assets/LLkthFromEnd.jpg)
+
+**Zip Linked Lists**
+
+![ZipList](./assets/ZipLinkedList.jpg)
