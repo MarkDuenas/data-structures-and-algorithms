@@ -17,9 +17,9 @@ class Stack {
       return null;
     }
 
-    this.storage.pop();
+    let item = this.storage.pop();
     this.top = !this.storage.length ? null : this.storage[this.storage.length - 1];
-    return this;
+    return item;
   }
 
   peek() {
