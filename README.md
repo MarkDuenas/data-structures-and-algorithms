@@ -69,5 +69,8 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 [Code Challenge 13, Multi-bracket validation](./javascript/multiBracketValidation)
 
+[Code Challenge 15, Binary Search Trees](./javascript/tree)
+
+
 
 
