@@ -8,7 +8,7 @@ class BinarySearchTree extends BinaryTree {
     let node = new Node(value);
     if (!this.root) {
       this.root = node;
-      return;
+      return this;
     }
     let current = this.root;
     //pointer for the previous node so we can assign left/right after traversal
@@ -33,6 +33,25 @@ class BinarySearchTree extends BinaryTree {
     return this;
   }
 
+  addR(value, current = this.root) {
+    if (!this.root) {
+      this.root = new Node(value);
+      return this;
+    }
+
+    if (!current) {
+      return new Node(value);
+    }
+
+    if (current.value < value) {
+      current.right = this.addR(value, current.right);
+    } else {
+      current.left = this.addR(value, current.left);
+    }
+
+    return current;
+  }
+
   contains(value) {
     if (this.root === null) {
       return false;
@@ -55,33 +74,33 @@ class BinarySearchTree extends BinaryTree {
 
 module.exports = BinarySearchTree;
 
-// let tree = new BinarySearchTree();
+let tree = new BinarySearchTree();
 
-// console.log(tree.root);
+console.log(tree.root);
 
-// tree.add(111);
+tree.addR(111);
 
-// console.log(tree.root);
+console.log(tree.root);
 
-// tree.add(222);
+tree.addR(222);
 
-// console.log(tree.root);
+console.log(tree.root);
 
-// tree.add(12);
+tree.addR(12);
 
-// console.log(tree.root);
+console.log(tree.root);
 
-// tree.add(55);
+tree.addR(55);
 
-// console.log(tree.root);
+console.log(tree.root);
 
-// tree.add(100);
+tree.addR(100);
 
-// console.log(JSON.stringify(tree.root, null, 4));
+console.log(JSON.stringify(tree.root, null, 4));
 
-// tree.add(6);
+tree.addR(6);
 
-// console.log(JSON.stringify(tree.root, null, 4));
+console.log(JSON.stringify(tree.root, null, 4));
 
-// console.log(tree.contains(100));
-// console.log(tree.contains(69));
+console.log(tree.contains(100));
+console.log(tree.contains(69));
