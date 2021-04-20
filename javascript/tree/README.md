@@ -42,3 +42,10 @@ Additionally add a contains method that returns a boolean if the value exists in
 
 - `add(value)` - adds a new node with the passed in value into the Binary Search Tree.
 - `contains(value)` - checks the BinarySearch tree for the value and returns a boolean.
+- `findMaxVal()` - returns largest value in the binary tree
+- `breadthFirst()` - returns an array of values, in the order of breadth first.
+
+## Solution
+
+![CC16](./CC16.jpg)
+![CC17](./CC17.jpg)

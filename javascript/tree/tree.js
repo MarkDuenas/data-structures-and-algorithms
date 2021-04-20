@@ -9,7 +9,7 @@ class BinaryTree {
     let nodes = [];
 
     let _walk = (node) => {
-      nodes.push(node.value);
+      nodes.push(node.value); // add node once leaf is found on left
 
       if (node.left) {
         _walk(node.left);
@@ -87,6 +87,22 @@ class BinaryTree {
     }
 
     return nodes;
+  }
+  findMaxValue() {
+    let max = this.root.value;
+
+    let _walk = (node) => {
+      max = node.value > max ? node.value : max;
+      if (node.left) {
+        _walk(node.left);
+      }
+      if (node.right) {
+        _walk(node.right);
+      }
+    };
+    _walk(this.root);
+
+    return max;
   }
 }
 
