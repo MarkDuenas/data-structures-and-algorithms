@@ -1,0 +1,15 @@
+{
+  "name": "hashMap",
+  "version": "1.0.0",
+  "description": "<!-- Short summary or background information -->",
+  "main": "hashmap.js",
+  "scripts": {
+    "test": "jest --coverage --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.0.1"
+  }
+}
