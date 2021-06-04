@@ -1,7 +1,7 @@
 "use strict";
 
 const BinaryTree = require("./tree.js");
-const Node = require("./node.js");
+const Node = require("./node-data.js");
 
 class BinarySearchTree extends BinaryTree {
   add(value) {

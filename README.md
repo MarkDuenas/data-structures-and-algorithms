@@ -61,5 +61,16 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 [Code Challenge 03 Binary Search](./javascript/arrayBinarySearch)
 
-[Code Challenge 05, 06, 07 Linked List](./javascript/linkedList)
+[Code Challenge 05, 06, 07, 08 Linked List](./javascript/linkedList)
+
+[Code Challenge 09, Stacks and Queues](./javascript/stacksAndQueues)
+
+[Code Challenge 11, Queue with 2 Stacks](./javascript/queueWithStacks)
+
+[Code Challenge 13, Multi-bracket validation](./javascript/multiBracketValidation)
+
+[Code Challenge 15, Binary Search Trees](./javascript/tree)
+
+
+
 
