@@ -9,7 +9,11 @@ function treeIntersection(bt1, bt2) {
   let nodes2 = bt2.preOrder();
 
   for (let i = 0; i < nodes1.length; i++) {
-    console.log(nodes1[i]);
+
+    console.log(nodes1[i])
+
+
+
     values[nodes1[i].toString()] = true;
   }
 
@@ -18,7 +22,8 @@ function treeIntersection(bt1, bt2) {
       arr.push(nodes2[i]);
     }
   }
-  console.log(values);
+  console.log(values)
+
 
   return arr;
 }
